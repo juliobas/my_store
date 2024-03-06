@@ -4,7 +4,7 @@ const routerApi = require('./routes');
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/errors.handler');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(express.json());
 
 const whitelist = ['http://localhost:8080', 'http://127.0.0.1:5500'];
